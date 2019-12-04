@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>Sign in</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="index.js" defer></script>
+</head>
+<body>
+
+  <div class="main">
+    <p class="sign" align="center"><img src=https://www.homebinder.com/img/flatlogo.png> </p>
+    <form class="form1" id="app" @submit="checkForm" action="/youloggedin!" method="post" novalidate="true">
+        <label class="label" for="email">Email Adress<label>
+        <input class="username" type="email" name="email" id="email" v-model="email">
+     
+        <label class="label" for="password">Password<label>
+        <input class="password" type="password" name="password" id="password" v-model="password">
+       
+        <p class="errors" v-if="errors.length" v-for="error in errors">
+          {{ error }}
+        </p>   
+
+        <input class="submit" type="submit" value="Submit">  
+
+      <p class="forgot" align="center"><a href="#SignUp">Create an Account</a> | <a href="#PasswordReset">Forgot Password?</a>
+      </p>
+    </form>
+  </div>
+
+</body>
+</html>
+
+
